@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, View, Text } from 'react-native'
 
-export default class MyClassComponent2 extends Component {
+export class MyClassComponent2 extends Component {
 
     state = {
         isHungry: true,
@@ -25,3 +25,4 @@ export default class MyClassComponent2 extends Component {
         )
     }
 }
+export default MyClassComponent2

@@ -5,12 +5,11 @@ export default function MyFunComponent(props) {
     return (
         <ScrollView>
             <Text>我是funtional component，属性是{props.name}, {props.sex}</Text>
-            <Greeting/>
+            <Greeting />
         </ScrollView>
 
     )
 }
-
 //scop是本文件？
 const Greeting = () => {
     return (
