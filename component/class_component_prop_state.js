@@ -12,6 +12,7 @@ export class MyClassComponent2 extends Component {
         return (
             <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'gray', padding: 15 }}>
                 <Text>
+                    //class Component中引用props要加上this
                     我叫{this.props.name},我{this.state.isHungry ? "饿了" : "吃饱了"}
                 </Text>
                 <Button onPress={

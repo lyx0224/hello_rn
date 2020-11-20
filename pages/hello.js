@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text, Image, ScrollView, TextInput, Button } from 'react-native';
-import MyClassComponent from './component/class_component';
-import MyFunComponent from './component/fun_component'
-import MyState from './component/my_state';
-import MyFunComponent2 from './component/class_component_prop_state'
-import MyStateHook from './component/state_hook'
+import MyClassComponent from '../component/class_component';
+import MyFunComponent from '../component/fun_component'
+import MyState from '../component/my_state';
+import MyFunComponent2 from '../component/class_component_prop_state'
+import MyStateHook from '../component/state_hook'
 
-function HelloWorld({navigation}){
+function HelloWorld({ navigation }) {
     return (
         <ScrollView>
             <Text> some text</Text>
@@ -20,14 +20,17 @@ function HelloWorld({navigation}){
             <MyState />
             <MyFunComponent2 name="小新" />
             <MyStateHook />
-            <Button title='nav to second' onPress={() => {
-                const args = {
-                    'data':'我是来自hello.js的参数哟',
-                    'id':10086
-                }
-                navigation.navigate('second', args)
-                console.log('clicked')
-            }} />
+            <View style={{ margin: 10 }}>
+                <Button title='nav to second' onPress={() => {
+                    const args = {
+                        'data': '我是来自hello.js的参数哟',
+                        'id': 10086
+                    }
+                    navigation.navigate('second', args)
+                    console.log('clicked')
+                }} />
+            </View>
+
         </ScrollView>
     );
 }

@@ -5,7 +5,7 @@ import { View, Text, Button } from 'react-native'
 function SecondPage({ route, navigation }) {
     const { data, id } = route.params;
     return (
-        <View>
+        <View style={{ backgroundColor: '#dddddddd'}}>
             <Text>This is SecondPage</Text>
             <Text>{data} id: {id}</Text>
             <View style={{ margin: 10 }}>
@@ -14,6 +14,10 @@ function SecondPage({ route, navigation }) {
 
             <View style={{ margin: 10 }}>
                 <Button title='list page' onPress={() => navigation.navigate('mylist')} />
+            </View>
+
+            <View style={{ margin: 10 }}>
+                <Button title='布局' onPress={() => navigation.navigate('layout')} />
             </View>
 
         </View>
