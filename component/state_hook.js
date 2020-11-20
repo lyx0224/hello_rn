@@ -4,6 +4,8 @@ import { TextInput, View, Text, StyleSheet } from 'react-native'
 function MyStateHook() {
     //value相当于state,onValueChanged相当于setState，两个名字可以随便取
     //useState的参数值为state的默认值，参数也可以为字典来定义多个状态
+
+    //注意：state hook只能用于function component
     const [value, onValueChanged] = useState('defalut value')
     return (
         <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1, backgroundColor: 'yellow' ,padding:10}}>

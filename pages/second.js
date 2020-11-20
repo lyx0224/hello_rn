@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native'
+import LifeCycleComponent from '../component/lifecycle_component';
 
 //页面会加上navigation bar
 function SecondPage({ route, navigation }) {
@@ -18,6 +19,10 @@ function SecondPage({ route, navigation }) {
 
             <View style={{ margin: 10 }}>
                 <Button title='布局' onPress={() => navigation.navigate('layout')} />
+            </View>
+
+            <View>
+                <LifeCycleComponent/>
             </View>
 
         </View>
