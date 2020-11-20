@@ -15,7 +15,16 @@ const App = () => {
       <Stack.Navigator initialRouteName='home'>
         <Stack.Screen name='home' component={HelloWorld} />
         <Stack.Screen name='second' component={SecondPage} />
-        <Stack.Screen name='mylist' component={MyListPage} options={{ title: '列表页' }} />
+        <Stack.Screen name='mylist' component={MyListPage} options={{
+          headerStyle: {
+            backgroundColor: 'orange',
+          },
+          headerTitle: '列表页',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   )

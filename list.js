@@ -1,5 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, FlatList } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { color } from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
     container: {
@@ -22,8 +24,14 @@ function MyListPage({ navigation }) {
         <View style={styles.container}>
             <FlatList
                 data={data}
-                renderItem={({ item }) =>
-                    <Text style={styles.item}>{item.name} + {item.sex}</Text>
+                //renterIetm透传item，index两个参数，点进源码可以看到
+                renderItem={({ item, index }) =>
+                    <TouchableOpacity onPress={() => {
+                        console.log(index)
+                    }}>
+                        <Text style={styles.item}>{item.name} + {item.sex}</Text>
+                    </TouchableOpacity>
+
                 }
             />
         </View>
