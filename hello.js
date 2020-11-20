@@ -21,7 +21,11 @@ function HelloWorld({navigation}){
             <MyFunComponent2 name="小新" />
             <MyStateHook />
             <Button title='nav to second' onPress={() => {
-                navigation.navigate('second')
+                const args = {
+                    'data':'我是来自hello.js的参数哟',
+                    'id':10086
+                }
+                navigation.navigate('second', args)
                 console.log('clicked')
             }} />
         </ScrollView>
