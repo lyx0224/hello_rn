@@ -29,8 +29,12 @@ export default class LifeCycleComponent extends Component {
     }
 
     ////当shouldComponentUpdate返回true时回调
-    componentDidUpdate() {
+    componentDidUpdate(preProps, preState) {
+        console.log('>>>>>>>')
         console.log('didUpdate')
+        console.log(preProps)
+        console.log(preState)
+        console.log('<<<<<<<')
     }
 
     componentWillUnmount() {
@@ -38,9 +42,12 @@ export default class LifeCycleComponent extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
+        console.log('>>>>>>>')
+        console.log('shouldComponentUpdate')
         console.log(nextState.clickTimes);
         //输出{},暂时没有设置属性
         console.log(nextProps);
+        console.log('<<<<<<<')
         if (nextState.clickTimes != this.state.clickTimes) {
             return true
         } else {
